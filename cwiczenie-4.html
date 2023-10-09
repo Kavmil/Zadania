@@ -23,18 +23,40 @@
 	
 		function matematyka()
 		{
-			var a = document.getElementById('a').value;
-			var b = document.getElementById('b').value;
-			var c = document.getElementById('c').value;
+			var a = document.getElementById("a").value;
+			var b = document.getElementById("b").value;
+			var c = document.getElementById("c").value;
 			a = parseInt(a);
 			b = parseInt(b);
 			c = parseInt(c);
+			var odpowiedz = "";
 
-			let najwiekszaLiczba = math.max(a,b,c);
-			let najmniejszaLiczba = math.min(a,b,c);
-			alert(najmniejszaLiczba);
+			var najmniejszaLiczba = Math.min(a,b,c);
+			odpowiedz+="<p>a)Najmniejsza liczba to "+najmniejszaLiczba+"</p>";
+			var najwiekszaLiczba = Math.max(a,b,c);
+			odpowiedz+="<p>b)Najwieksza liczba to "+najwiekszaLiczba+"</p>" ;
 			
+			odpowiedz+="<p>c)Wartości bezwględne: |a|="+Math.abs(a)+" |b|="+Math.abs(b)+" |c|="+Math.abs(c)+"</p>";
+			odpowiedz+="<p>d)";
+			if(a%2==0){
+				odpowiedz+="A jest parzyste, ";
+			}else{
+				odpowiedz+="A jest nieparzyste, ";
+			}
+			if(b%2==0){
+				odpowiedz+="B jest parzyste, ";
+			}else{
+				odpowiedz+="B jest nieparzyste, ";
+			}
+			if(c%2==0){
+				odpowiedz+="C jest parzyste ";
+			}else{
+				odpowiedz+="C jest nieparzyste ";
+			}
+			odpowiedz+="</p>";
 			
+			//odd - nieparzysta
+			document.getElementById("wynik").innerHTML = odpowiedz;
 		}
 
 	</script>
