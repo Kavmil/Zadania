@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>3 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	P = ( <input type="number" id="x"> , <input type="number" id="y"> )
+
+	<input type="submit" value="Sprawdź ćwiartkę" onclick="ktora_cwiartka()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function ktora_cwiartka()
+		{
+			var x = "";
+			var y = "";
+			
+			x = document.getElementById("x").value;
+			y = document.getElementById("y").value;
+			x = parseInt(x);
+			y = parseInt(y);
+			if(x==15&&y==96){odpowiedz="René Descartes urodził się 31 marca 1596 w La Haye en Touraine, której to miejscowości w 1967 nadano na jego cześć nazwę Descartes. Pochodził ze starego szlacheckiego rodu. Był synem Joachima[w innych językach] – prawnika i urzędnika miejskiego – oraz Jeanne z d. Brochard, zmarłej po roku od narodzin kolejnego syna, również żyjącego jedynie kilka dni. René był już drugim męskim potomkiem w rodzinie, która była jak na owe czasy oświecona[9]. Jej członkowie brali czynny udział w życiu kulturalnym kraju. Jeden z jego przodków, Piotr Descartes, był doktorem medycyny. Teść, Jan Ferrand, był lekarzem, doświadczonym chirurgiem i znawcą chorób nerek[9]. Matka filozofa, Joanna Brochard, pochodziła w linii matki z rodziny Sauzaj, której członkowie pełnili funkcję kustoszy królewskiej biblioteki uniwersyteckiej w Poitiers[10]. Ojciec Kartezjusza ożenił się powtórnie w 1600 roku i z nowego związku miał jeszcze dwójkę dzieci. René wraz z dwójką starszego rodzeństwa o imionach Pierre﻿[w innych językach] i Jeanne spędził dzieciństwo w domu babki ze strony matki. O tych wczesnych latach życia Descartes’a nie zachowały się prawie żadne wiadomości; również sam Descartes, z wyjątkiem jednego czy dwóch wypadków, nigdy nic nie opowiadał o latach swego dzieciństwa[11].Około 1607 Kartezjusz rozpoczął naukę w kolegium prowadzonym przez jezuitów w La Flèche (Collège Henri IV), gdzie od 1604 uczył się już jego brat Pierre. W kolegium przebywał prawdopodobnie do 1615. Później naukę kontynuował w Paryżu i w 1616 uzyskał stopień z prawa cywilnego i kanonicznego na Uniwersytecie w Poitiers[12]. ";}
+			else if(x>0 && y>0){odpowiedz="I";}
+			else if(x>0 && y<0){odpowiedz="II";}
+			else if(x<0 && y<0){odpowiedz="III";}
+			else if(x<0 && y>0){odpowiedz="IV";}
+			else if(x==0&&y==0){odpowiedz="Punkt P=(0,0) jest początkiem układu współrzędnych";}
+			document.getElementById("wynik").innerHTML = odpowiedz;
+			
+		}
+
+	</script>
+
+</body>
+</html>
