@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>2 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<label> Podaj imię: <input type="text" id="imie"> </label>
+	<label> Podaj wiek: <input type="number" id="wiek"> </label>
+	
+	<input type="submit" value="Sprawdź udział" onclick="sprawdz()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function sprawdz()
+		{
+			var wiek="";
+			var imie="";
+			var odpowiedz="";
+			imie = document.getElementById("imie").value;
+			wiek = document.getElementById("wiek").value;
+			wiek = parseInt(wiek);
+			
+			if(wiek < 16){
+				odpowiedz = "Nie możesz wziąść udziału w seansie";
+			}
+			else if(wiek >= 16 && wiek <=17){
+				odpowiedz = "Może wziąć udział, jeśli jest z opiekunem. Cena biletu to 12PLN";
+			}
+			else if(wiek >= 18 && (imie == "Brad" || imie == "Morgan")){
+				odpowiedz = "Może wziąć udział. Cena biletu to 0PLN";
+			}
+			else if(wiek >= 18){
+				odpowiedz = "Może wziąć udział. Cena biletu to 18PLN";
+			}
+			document.getElementById("wynik").innerHTML = odpowiedz;
+		}
+
+	</script>
+
+</body>
+</html>
