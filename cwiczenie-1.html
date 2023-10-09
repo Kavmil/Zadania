@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>1 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<label>
+		Podaj numer dnia tygodnia: <input type="number" id="numerDnia">
+	</label>
+	
+	<input type="submit" value="Zobacz nazwę dnia" onclick="getDayName()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function getDayName()
+		{
+			var numerDnia="";
+			numerDnia = document.getElementById("numerDnia").value;
+			numerDnia = parseInt(numerDnia);
+			if(numerDnia==1){
+				document.getElementById("wynik").innerHTML = "Pierwszy dzień tygodnia to Monday - poniedziałek";
+			}
+			else if(numerDnia==2){
+				document.getElementById("wynik").innerHTML = "Drugi dzień tygodnia to Tuesday - wtorek";
+			}
+			else if(numerDnia==3){
+				document.getElementById("wynik").innerHTML = "Trzeci dzień tygodnia to Wednesday - środa";
+			}
+			else if(numerDnia==4){
+				document.getElementById("wynik").innerHTML = "Czwarty dzień tygodnia to Thursday - czwartek";
+			}
+			else if(numerDnia==5){
+				document.getElementById("wynik").innerHTML = "Piąty dzień tygodnia to Friday - piątek, piąteczek, piątunio <style>#wynik{color:yellow;}</style>";
+			}
+			else if(numerDnia==6){
+				document.getElementById("wynik").innerHTML = "Szósty dzień tygodnia to Saturday - sobota <style>#wynik{color:green;}</style>";
+			}
+			else if(numerDnia==7){
+				document.getElementById("wynik").innerHTML = "Pierwszy dzień tygodnia to Sunday - niedziela <style>#wynik{color:green;}</style>";
+			}
+			else{
+				document.getElementById("wynik").innerHTML = "To nie jest prawidłowy numer dnia tygodnia! <style>#wynik{color:red;}</style>";
+			}
+			
+		}
+
+	</script>
+
+</body>
+</html>
